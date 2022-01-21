@@ -1,11 +1,12 @@
-package lib.ui;
+package lib.ui.CRM;
 
 import io.appium.java_client.AppiumDriver;
+import lib.ui.MainPageObject;
 import org.openqa.selenium.By;
 
-public class CrmCompanyPageObject extends MainPageObject{
+public class CompanyFilterPageObject extends MainPageObject {
 
-    public CrmCompanyPageObject(AppiumDriver driver) {super(driver);}
+    public CompanyFilterPageObject(AppiumDriver driver) {super(driver);}
 
     private final static String
     CRM_TAB = "//android.widget.FrameLayout[@content-desc=\"CRM\"]",

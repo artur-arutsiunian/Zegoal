@@ -1,8 +1,8 @@
-package tests;
+package tests.Tasks;
 
 import lib.CoreTestCase;
 import lib.ui.LoginPageObject;
-import lib.ui.ScheduleTasksPageObject;
+import lib.ui.Schedule.ScheduleTasksPageObject;
 import org.junit.Test;
 
 public class ChooseAndCompleteTaskTest extends CoreTestCase {

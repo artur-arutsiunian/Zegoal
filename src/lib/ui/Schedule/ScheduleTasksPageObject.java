@@ -1,9 +1,10 @@
-package lib.ui;
+package lib.ui.Schedule;
 
 import io.appium.java_client.AppiumDriver;
+import lib.ui.MainPageObject;
 import org.openqa.selenium.By;
 
-public class ScheduleTasksPageObject extends MainPageObject{
+public class ScheduleTasksPageObject extends MainPageObject {
 
     public ScheduleTasksPageObject(AppiumDriver driver) {
         super(driver);
