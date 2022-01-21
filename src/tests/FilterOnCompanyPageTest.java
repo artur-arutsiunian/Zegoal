@@ -1,7 +1,7 @@
 package tests;
 
 import lib.CoreTestCase;
-import lib.ui.CrmPageOject;
+import lib.ui.CrmCompanyPageObject;
 import lib.ui.LoginPageObject;
 import org.junit.Test;
 
@@ -12,7 +12,7 @@ public class FilterOnCompanyPageTest extends CoreTestCase {
         LoginPageObject LoginPageObject = new LoginPageObject(driver);
         LoginPageObject.processLoginOrganizationAndUser();
 
-        CrmPageOject CrmPageObject = new CrmPageOject(driver);
+        CrmCompanyPageObject CrmPageObject = new CrmCompanyPageObject(driver);
         CrmPageObject.moveToCompanyInCrm();
     }
 }
