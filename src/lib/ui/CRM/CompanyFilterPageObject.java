@@ -64,7 +64,7 @@ public class CompanyFilterPageObject extends MainPageObject {
         Thread.sleep(2000);
         this.waitForElementPresent(
                 By.xpath(FILTER_EXIST_ON_PAGE),
-                "Can't find filter icon yj the last step",
+                "Can't find filter icon on the last step",
                 5
         );
     }
