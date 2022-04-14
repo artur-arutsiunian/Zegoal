@@ -20,7 +20,7 @@ public class CoreTestCase {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("deviceName", "AndroidTestDevice");
+        capabilities.setCapability("deviceName", "AndroidTestDevicee");
         capabilities.setCapability("platformVersion", "12.0");
         capabilities.setCapability("automationName", "Appium");
         capabilities.setCapability("appPackage", "zegoal.com.zegoal.debug");

@@ -15,7 +15,7 @@ public class CompanyFilterPageObject extends MainPageObject {
     LIST = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[4]/android.widget.CheckBox",
     ACCEPT_CHANGES = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ImageView[2]",
     AGAIN_ACCEPT_CHANGES = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.ImageView[3]",
-    FILTER_EXIST_ON_PAGE = "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout[1]/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.LinearLayout/android.view.ViewGroup/android.widget.ImageView[1]";
+    COMPANY_TAB_IS_SELECTED = "//android.widget.LinearLayout[@content-desc=\"Company\"]";
 
     public void moveToCompanyInCrm() throws InterruptedException{
 
@@ -62,9 +62,9 @@ public class CompanyFilterPageObject extends MainPageObject {
         );
 
         Thread.sleep(2000);
-        this.waitForElementPresent(
-                By.xpath(FILTER_EXIST_ON_PAGE),
-                "Can't find filter icon on the last step",
+        this.waitForElementPresentAndConsistAttribute(
+                By.xpath(COMPANY_TAB_IS_SELECTED),
+                "Can't confirm that Company tab is selected",
                 5
         );
     }

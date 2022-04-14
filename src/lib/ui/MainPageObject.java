@@ -1,20 +1,12 @@
 package lib.ui;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.TouchAction;
-import org.apache.commons.io.FileUtils;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.List;
 
 public class MainPageObject {
@@ -39,6 +31,22 @@ public class MainPageObject {
     {
         return waitForElementPresent(by, error_message, 5);
     }
+
+    public boolean waitForElementPresentAndConsistAttribute(By by, String error_message, long timeoutInSeconds)
+    {
+        WebDriverWait wait = new WebDriverWait(driver, timeoutInSeconds);
+        wait.withMessage(error_message + "\n");
+        return wait.until(
+                ExpectedConditions.elementToBeSelected(by)
+        );
+    }
+
+    public boolean waitForElementPresentAndConsistAttribute(By by, String error_message)
+    {
+        return waitForElementPresentAndConsistAttribute(by, error_message, 5);
+    }
+
+
     public WebElement waitForElementAndClick(By by, String error_message, long timeoutInSeconds) throws InterruptedException {
         Thread.sleep(2000);
         WebElement element = waitForElementPresent(by, error_message, 5);

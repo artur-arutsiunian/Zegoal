@@ -1,7 +1,7 @@
 package tests.Backlog;
 
 import lib.CoreTestCase;
-import lib.ui.Backlog.FilterByDate;
+import lib.ui.Backlog.FilterByDatePageObject;
 import lib.ui.LoginPageObject;
 import org.junit.Test;
 
@@ -12,7 +12,7 @@ public class FilterOnBacklogTabTest extends CoreTestCase {
         LoginPageObject LoginPageObject = new LoginPageObject(driver);
         LoginPageObject.processLoginOrganizationAndUser();
 
-        FilterByDate FilterByDate = new FilterByDate(driver);
-        FilterByDate.moveToBacklogFilter();
+        FilterByDatePageObject FilterByDatePageObject = new FilterByDatePageObject(driver);
+        FilterByDatePageObject.moveToBacklogFilter();
     }
 }
